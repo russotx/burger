@@ -38,3 +38,6 @@ jspm_packages
 
 # Mac OS
 .DS_Store
+
+# demo video
+burger_demo.mp4
