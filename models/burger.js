@@ -2,9 +2,9 @@ const orm = require('../config/orm.js');
 
 let burgerOps = {
 
-  all : function(tbl){
+  all : function(tbl,callback){
           orm.selectALL(tbl,function(result){
-            return result;
+            callback(result);
           });
         },
   update : function(tbl,obj,callback){

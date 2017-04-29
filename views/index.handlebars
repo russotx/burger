@@ -2,7 +2,7 @@
   <h3>Fresh Burgers</h3>
     {{#each viewArr}}
       {{#unless this.devoured}}
-        <div class="burger fresh">{{this.name}}<button id="{{this.name}}" class="devour-btn"></button></div>
+        <div class="burger fresh">{{this.burger_name}}<button id="{{this.burger_name}}" class="devour-btn">Devour It!</button></div>
       {{/unless}}
     {{/each}}
 </div>
@@ -17,7 +17,7 @@
   <h3>Devoured Burgers</h3>
   {{#each viewArr}}
       {{#if this.devoured}}
-        <div class="burger dev">{{this.name}}</div>
+        <div class="burger dev">{{this.burger_name}}</div>
       {{/if}}
   {{/each}}
 </div>

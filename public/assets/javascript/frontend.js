@@ -1,27 +1,26 @@
 $('#burger-btn').on('click',function(){
-  let burgerObj = {name:""};
+  let burgerObj = {name:"",devoured:false};
   burgerObj.name = $('burger-input').val();
   $.ajax({
     method : "POST",
     url: "/",
     datatype: "json",
     contentType: "application/josn; charset=utf-8",
-    data: JSON.stringify(burgerObj.name)
-   }).done(function(newburgers){
-      // display new view
-      
+    data: JSON.stringify(burgerObj)
    });
 });
 
-$('.devour-btn').on('click',function(event){
+
+
+$('#burger-container').on('click','.devour-btn',function(event){
+  let burgerObj = {name:""};
+  burgerObj.name = event.target.id;
+  console.log(burgerObj.name);
   $.ajax({
     method: "PUT",
     ulr: "/",
     datatype: "json",
     contentType: "application/json; charset=utf-8",
-    data: JSON.stringify(burgerObj.name)
-  }).done(function(newburgers){
-    // display new view
-    
+    data: JSON.stringify(burgerObj)
   });
-})
+});

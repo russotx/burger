@@ -20,8 +20,8 @@ const orm = {
   },
 
   updateOne : function(table,obj,callback){
-    const query = "UPDATE ? SET devoured=? WHERE id=?";
-    burgerDB.query(query,[table,obj.devoured,obj.id],function(err,result){
+    const query = "UPDATE "+table+" SET `devoured`=true WHERE `burger_name`='"+obj.name+"'";
+    burgerDB.query(query,function(err,result){
       if (err) throw err;
       callback(result);
     });
