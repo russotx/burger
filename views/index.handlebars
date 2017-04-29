@@ -1,0 +1,23 @@
+<div class="third">
+  <h3>Fresh Burgers</h3>
+    {{#each viewArr}}
+      {{#unless devoured}}
+        <div class="burger fresh">{{name}}<button id="{{name}}" class="devour-btn"></button></div>
+      {{/unless}}
+    {{/each}}
+</div>
+
+<div class='third'>
+
+  <img src="assets/img/burger.jpg" alt="burger">
+
+</div>
+  
+<div clas='third'>
+  <h3>Devoured Burgers</h3>
+  {{#each viewArr}}
+      {{#if devoured}}
+        <div class="burger dev">{{name}}</div>
+      {{/if}}
+  {{/each}}
+</div>
