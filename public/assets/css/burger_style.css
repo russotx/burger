@@ -1,0 +1,43 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.half{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.burger {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-family: "Source Sans Pro";
+}
+
+.devour-btn {
+  width: 100px;
+  height: 25px;
+  background-color: #1F88D0;
+  color: white;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.build {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  display: flex;
+  align-self: center;
+
+
+}
+
+.build {
+  align-self: center;
+  align-self: center;
+
+}

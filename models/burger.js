@@ -8,15 +8,15 @@ let burgerOps = {
           });
         },
   update : function(tbl,obj,callback){
-    orm.updateOne(tbl,obj,function(result){
-      callback(result);
-    });
-  },
+              orm.updateOne(tbl,obj,function(result){
+                callback(result);
+              });
+            },
   insert : function(tbl,obj,callback){
-    orm.insertOne(tbl,obj,function(result){
-      callback(result);
-    });
-  }
+              orm.insertOne(tbl,obj,function(result){
+                callback(result);
+              });
+            }
 };
 
 module.exports = burgerOps;

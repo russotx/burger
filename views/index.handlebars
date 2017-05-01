@@ -1,19 +1,19 @@
-<div class="third">
+<div class="half">
   <h3>Fresh Burgers</h3>
     {{#each viewArr}}
       {{#unless this.devoured}}
-        <div class="burger fresh">{{this.burger_name}}<button id="{{this.burger_name}}" class="devour-btn">Devour It!</button></div>
+        <div class="burger fresh">
+          {{this.burger_name}}
+          <form class="burger fresh" action="/devour?_method=PUT" method="POST" id="{{this.burger_name}}" >
+            <input type="hidden" name="name" value="{{this.burger_name}}">
+            <button class="devour-btn" type="submit">Devour It!</button>
+          </form>
+        </div>
       {{/unless}}
     {{/each}}
 </div>
-
-<div class='third'>
-
-  <img src="assets/img/burger.jpg" alt="burger">
-
-</div>
   
-<div clas='third'>
+<div class='half'>
   <h3>Devoured Burgers</h3>
   {{#each viewArr}}
       {{#if this.devoured}}

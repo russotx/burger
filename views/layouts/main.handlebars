@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="assets/style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/burger_style.css" type="text/css">
 </head>
 <body>
 <header>
 <h1>MVC Burger Hut</h1>
+<img src="./assets/img/burger.jpg" alt="burger" id="burger-pic">
 </header>
 <div id="burger-container" class="row">
   {{{body}}}
-  <div class="whole">
-    <input id="burger-input" type="text" name="burgers-in"></input>
-    <button id="burger-btn">Submit</button>
-  </div>
 </div>
+<div class="row">
+    <form class="burger build" action="/add" method="POST">
+      <input id="burger-input" type="text" name="name" value="" placeholder="Enter a new burger..."></input>
+      <button type="submit" value="submit" id="burger-btn">Submit</button>
+    </form>
+  </div>
 <footer>
 Copyright Daniel Russo &copy;
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="assets/javascript/frontend.js"></script>
 </body>
 </html>
